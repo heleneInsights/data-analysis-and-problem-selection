@@ -14,7 +14,7 @@ This project analyzes four datasets obtained from public and trusted sources.
 - Aircraft Registrations in Chile: https://datos.gob.cl/dataset/aeronaves-inscritas-en-el-r-n-a-al-30-abr-2026-xlsx
 - Earthquakes in Chile: https://www.kaggle.com/datasets/nicolasgonzalezmunoz/earthquakes-on-chile
 - Healthy Diet and Calorie Intake: https://www.kaggle.com/datasets/aliyasaly1231/healthy-diet-and-calorie-intake
-- Daily Temperatures in Chile: https://datos.gob.cl/dataset/2725
+- Daily Temperatures in Chile: https://datos.gob.cl/uploads/recursos/temperatura2014-csv.csv
 
 ## Dataset Selection Criteria
 
