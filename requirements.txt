@@ -3,5 +3,11 @@ numpy
 matplotlib
 seaborn
 plotly
+IPython
+statsmodels
 jupyter
 scikit-learn
+xgboost
+lazypredict
+optuna
+joblib

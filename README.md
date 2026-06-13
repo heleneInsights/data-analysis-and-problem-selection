@@ -2,13 +2,19 @@
 
 ## 🛣️ Project Description
 
-This project analyzes four datasets using Python-based data analysis techniques.  
+This project analyzes multiple datasets and develops a machine learning solution for one selected dataset.
 
-This first phase focuses on **exploratory data analysis (EDA)** and visualization for four datasets. Based on the findings, one dataset will be selected for further analysis in Part II.
+The project follows a complete data science workflow:
 
-The second phase will include data cleaning, feature engineering, machine learning model development, and prediction tasks.
+- Exploratory Data Analysis (EDA)
+- Data Cleaning and Preprocessing
+- Feature Selection
+- Machine Learning Model Development
+- Hyperparameter Optimization
+- Model Evaluation
+- Model Export and Serialization
 
-The project includes a full analytical workflow, from data inspection to business recommendations, supported by visual storytelling through charts and a final presentation summarizing the findings.
+The final solution includes a trained classification model exported as a `.joblib` artifact for future deployment and inference.
 
 ---
 
@@ -157,6 +163,83 @@ The Healthy Diet and Calorie Intake dataset was selected because it demonstrates
 - **Predictive potential:** High, due to strong relationships between health status and several explanatory variables.
 - **Business relevance:** High, with applications in nutrition planning, preventive healthcare, wellness programs, and personalized health recommendations.
 
+### 🎯 Machine Learning Solution
+
+#### Objective
+
+Develop a multiclass classification model capable of predicting an individual's Health Status using demographic, biometric, dietary, and lifestyle variables.
+
+#### Target Variable
+
+`Health_Status`
+
+Classes:
+
+- Healthy
+- Underweight
+- Overweight
+- Obese
+
+### ⚙️ Machine Learning Workflow
+
+The following steps were performed:
+
+1. Data cleaning and validation
+2. Removal of invalid observations
+3. Feature engineering
+4. Multicollinearity assessment (VIF)
+5. Feature selection
+6. Train/Test split
+7. Data scaling
+8. Model training
+9. Hyperparameter tuning using Optuna
+10. Final model evaluation
+11. Model serialization using Joblib
+
+### 🤖 Models Evaluated
+
+The following classification algorithms were tested:
+
+- Logistic Regression
+- Decision Tree
+- Random Forest
+- Bagging Classifier
+- XGBoost
+- Tuned Logistic Regression
+
+Performance was evaluated using:
+
+- Accuracy
+- Precision
+- Recall
+- F1 Score
+- Confusion Matrix
+
+### 📈 Results
+
+The best-performing model achieved more than 90% classification accuracy on the test dataset.
+
+Key predictors included:
+
+- Weight
+- Height
+- Fat Intake
+
+The final model demonstrated strong predictive capability across all Health Status categories.
+
+### 💾 Trained Model
+
+The final trained model is included in the repository as a serialized Joblib artifact.
+
+Example:
+
+```python
+import joblib
+
+model = joblib.load("selected_dataset/health_status_model.joblib")
+
+prediction = model.predict(new_data)
+
 ---
 
 ## 🔧 Installation
@@ -190,6 +273,8 @@ Open and run the Jupyter notebooks inside the `selected_dataset/` folder to repr
 - Matplotlib
 - Seaborn
 - Plotly
+- Scikit-learn
+- Optuna
 - Jupyter Notebook
 - Git
 - GitHub
@@ -198,21 +283,20 @@ Open and run the Jupyter notebooks inside the `selected_dataset/` folder to repr
 
 ## 📌 Future Improvements
 
-- Evaluate multiple classification algorithms and compare their performance.
-- Apply feature engineering techniques to improve predictive accuracy.
-- Explore model interpretability methods to identify the most influential health factors.
-- Incorporate additional nutritional or medical variables if available.
-- Deploy the final model as a simple decision-support tool for nutrition recommendations.
+- Deploy the model as a web application
+- Evaluate additional ensemble models
+- Test performance on external datasets
+- Build an API for real-time predictions
 
 ---
 
 ## ⚠️ Limitations
 
-- Analysis is exploratory and descriptive in nature.
-- Predictive modeling will be performed only for the selected dataset in Part II.
-- Some variables may contain synthetic or simulated patterns that do not fully represent real-world populations.
-- Further segmentation and statistical testing could enhance insights.
-- Some patterns may require deeper domain-specific analysis.
+- The dataset may contain synthetic or simulated patterns.
+- Results are limited to the available dataset.
+- External validation has not yet been performed.
+- Health Status definitions may be influenced by BMI-derived criteria.
+- Model performance may vary when applied to real-world populations.
 
 ---
 
